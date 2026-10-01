@@ -28,7 +28,10 @@ jobs:
       - name: Validate data
         run: python -m src.validate_data
 
-      - name: Run tests and train model
+      - name: Train model
+        run: python -m src.train
+
+      - name: Run tests
         run: pytest -q
 
       - name: Upload MLflow runs
